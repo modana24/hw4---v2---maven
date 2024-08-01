@@ -10,4 +10,5 @@ public class Skyprohw4v2Application {
 		SpringApplication.run(Skyprohw4v2Application.class, args);
 	}
 
+
 }
