@@ -16,23 +16,37 @@ public class CalculatorService {
         return "<b>Прощай милый друг...</b>";
     }
 
-    public String calculateSum(int num1, int num2) {
+    public String calculateSum(Integer num1, Integer num2) {
+        if (num1 == null & num2 == null) {
+            return "Не передан параметр";
+        }
         return String.valueOf(num1 + num2);
     }
 
 
     @GetMapping("/minus")
-    public String calculateMinus(int num1, int num2) {
+    public String calculateMinus(Integer num1, Integer num2) {
+        if (num1 == null & num2 == null) {
+            return "Не передан параметр";
+        }
         return String.valueOf(num1 - num2);
     }
 
     @GetMapping("/multiply")
-    public String calculateMultiply(int num1, int num2) {
+    public String calculateMultiply(Integer num1, Integer num2) {
+        if (num1 == null & num2 == null) {
+            return "Не передан параметр";
+        }
         return String.valueOf(num1 * num2);
     }
 
     @GetMapping("/divide")
-    public String calculatedivide(int num1, int num2) {
+    public String calculatedivide(Integer num1, Integer num2) {
+        if (num1 == null & num2 == null) {
+            return "Не передан параметр";
+        } else if (num2 == 0) {
+            return "Делить на ноль нельзя";
+        }
         return String.valueOf(num1 / num2);
     }
 }
